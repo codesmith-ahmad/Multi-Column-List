@@ -60,13 +60,14 @@ public class MultiColList {
 		this.headings.set(i, heading);
 	}*/
 	
-	public void add(String... items) {
+	public MultiColList add(String... items) {
 		for (String item : items) {
 			add(item);
 		}
+		return this;
 	}
 	
-	public void add(String item) {
+	public MultiColList add(String item) {
 		items.add(item);
 		status.add('_');
 		//headings.add(null);
@@ -78,13 +79,15 @@ public class MultiColList {
 		}
 		
 		initialize();
+		return this;
 	}
 	
-	public void remove(int i) {
+	public MultiColList remove(int i) {
 		items.remove(i-1);
 		status.remove(i-1);
 		//headings.remove(i-1);
 		initialize();
+		return this;
 	}
 	
 	public void clear() {
@@ -115,82 +118,4 @@ public class MultiColList {
 		
 		return str;
 	}
-	
-	public static void main(String[] args) {
-		
-		MultiColList list;
-		
-		System.out.println("TEST TOSTRING\n");
-		
-			list = new MultiColList("one","two","three","four","five","six");
-			System.out.println(list);
-		
-		System.out.println("\nTEST ADD\n");
-		   	
-		    list = new MultiColList("one","two","three","four","five");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    System.out.println(list);
-		    
-		System.out.println("\nTEST ADD TO EMPTY LIST\n");
-		
-			MultiColList emptylist = new MultiColList();
-			emptylist.add("dummy");
-			//emptylist.add("dummy");
-			//emptylist.add("dummy");
-			System.out.println(emptylist);
-	   	
-	    System.out.println("\nTEST REMOVE\n");
-	    
-		    list = new MultiColList("one","two","three","four","five");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.remove(1);
-		    System.out.println(list);
-	   	
-	    System.out.println("\nTEST CLEAR\n");
-		   	
-	    	System.out.println(list);
-	    	list.clear();
-	    	System.out.println("deleted" + list);
-	    	
-	    System.out.println("\nTEST VARIABLE HEIGHT\n");
-	    
-		    list = new MultiColList("one","two","three","four","five");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    list.add("dummy");
-		    System.out.println(list);
-		    list.setVertical(7);
-		    System.out.println(list);
-	    	
-		 
-	}
-
 }
