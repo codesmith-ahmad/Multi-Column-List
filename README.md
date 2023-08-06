@@ -1,6 +1,6 @@
 # Multi-Column-List
 
-This code is a project which is part of a larger project and includes two Java classes: MultiColList.java and ListDemo.java. The main purpose of this code is to create a nicely formatted multi-column list and demonstrate its functionalities through ListDemo.java. My plan was to use this in my own handmade CLI to display a list of tasks and deadlines in the main menu. The MultiColList class represents the multi-column list and employs severa OOP concepts to manage and manipulate the list data.
+This code is a project which is part of a larger project and includes two Java classes: MultiColList.java and ListDemo.java. The main purpose of this code is to create a nicely formatted multi-column list and demonstrate its functionalities through ListDemo.java. My plan was to use this to format the main menu of my own handmade CLI-based tasks and deadlines manager. The MultiColList class represents the multi-column list and employs several OOP concepts to manage and manipulate the list data.
 
 ![sample](sample.png)
 
